@@ -8,7 +8,15 @@
 */
 
 function isAnagram(str1, str2) {
+  let sortedStr = (str) => {
+    return str.toLowerCase().split("").sort().join("")
+  }
 
+  // console.log(sortedStr(str1));
+  // console.log(sortedStr(str2));
+  return sortedStr(str1)==sortedStr(str2);
 }
+
+// console.log(isAnagram("vvasu", "asuvv"))
 
 module.exports = isAnagram;
